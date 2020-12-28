@@ -4,6 +4,7 @@ const app=express();
 const hbs=require('hbs');
 // console.log(__dirname);
 // console.log(path.join(__dirname,'..'));
+const port=process.env.PORT||3001
 const publicdirectpath=path.join(__dirname,'../public');
 const viewpath=path.join(__dirname,'../template/viwes');
 const partialspath=path.join(__dirname,'../template/partials');
@@ -59,6 +60,6 @@ app.get('*',(req,res)=>{
 //     res.send('help express');
 //  })
 
-app.listen(3001,()=>{
+app.listen(port,()=>{
     console.log('server started');
 })
