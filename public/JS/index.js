@@ -21,12 +21,15 @@ weather.addEventListener('submit',(e)=>{
     }
     else
     {
+      document.getElementById("first-1").innerHTML='Hi  we are going to deploy';
           fetch(`http://api.weatherstack.com/current?access_key=061ca3d6ebdc9d876fb75f2a4e0abfdd&query=${city}`).then((response)=>{
             response.json().then((data=>{
                 console.log(data.error.info);
                 if(data.error)
                 {
                   // console.log(data);
+                  document.getElementById("first-1").innerHTML='Hi  we have got some errors';
+
                    var gg=data.error.info;
                    document.getElementById("first-1").innerHTML=gg;
                 }
