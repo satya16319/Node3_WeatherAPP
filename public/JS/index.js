@@ -1,9 +1,9 @@
-console.log('kgkkkg');
+
 
 // const { response } = require("express");
 
 
-const weather=document.querySelector('form');
+// const weather=document.querySelector('form');
 const search=document.querySelector('input');
 // const message=ducument.querySelector('#first-1');
 const p=document.getElementById("first-1").innerHTML;
