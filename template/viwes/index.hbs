@@ -4,6 +4,7 @@
       <link rel='stylesheet' href="./css/style.css">
       <link rel='icon' href="./img/weather.png">
       {{!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+        {{!-- <script src="./JS/index.js"></script> --}}
 
 </head>
 <body>
@@ -13,8 +14,9 @@
       {{!-- <hr> --}}
        </div>
       <div id="ff">
-      <pre>UPH-1/0 (0.1)</pre>
-      <pre>CRR: 6.00</pre>
+      {{!-- <pre id="f1">UPH-1/0 (0.1)</pre> --}}
+      <pre id="f1"></pre>
+      <pre id="f2">CRR: 6.00</pre>
       <pre>
 
 
@@ -22,30 +24,63 @@
       </div>
       <br/>
       <div id="gg">
-      <pre>Batting                     R(B)    4s   6s  SR</pre>
+      <pre id="f3">Batting                     R(B)    4s    6s    SR</pre>
       {{!-- <br/> --}}
-      <pre>satyajt kuyar*              1(1)    0    0    100</pre>
+      <pre id="f4">satyajt kuyar*              1(1)    0     0     100</pre>
       {{!-- <br/> --}}
-      <pre>Indrajeet kumar             0(0)    0    0    0</pre>
+      <pre id="f5">Indrajeet kumar             0(0)    0     0      0</pre>
       {{!-- <br/> --}}
       <br/>
-      <pre>Bowling                     O       M    R    W</pre>
-      <pre>vikash kumar*               0.1     0    1    0</pre>
-      <pre>vikesh kumar                0       0    0    0</pre>
+      <pre id="f6">Bowling                     O       M     R      W</pre>
+      <pre id="f7">vikash kumar*               3.1     0     20      0</pre>
+      <pre id="f8">vikesh kumar                4       0     40      1</pre>
        <br/>
 
        </div>
    </br>
         <div id="extras">
       <pre>Extras 0</pre>
-      <pre>(nb 0, b 0, penalty 0, w 0, lb 0)</pre>
+      <pre>(nb 0, b 0, penalty 0, w 4, lb 2)</pre>
         </div>
   </div>
- 
+ <script>
+var run=66;
+var totalball=43;
+var avg="CRR: "+((run/totalball)*6).toFixed(2);
+var wicket=1;
+var over=7.1;
+var sc="UPH-"+run+"/"+wicket+ "("+over+")";
+console.log(sc);
+     document.getElementById("f1").innerHTML=sc;
+     document.getElementById("f2").innerHTML=avg;
+
+
+
+  var player1=30;
+  var p1bal=23;
+  var p14=2;
+  var p16=0;
+  var p1avg=(player1/p1bal).toFixed(2);
+  var p1name="satyajeet kumar*"
+  var p1status=p1name+"            "+player1+"("+p1bal+")   "+p14+"    "+p16+"   "+p1avg;
+   document.getElementById("f4").innerHTML=p1status;
+
+
+  var player2=30;
+  var p2bal=20;
+  var p24=2;
+  var p26=2;
+  var p2avg=(player2/p2bal).toFixed(2);
+  var p2name="randon name*";
+  var p2status=p2name+"                "+player2+"("+p2bal+")   "+p24+"    "+p26+"   "+p2avg;
+   document.getElementById("f5").innerHTML=p2status;
+ </script>
     {{!-- {{>footer}} --}}
   <!-- <img src="./img/destop.png"> -->
-        <script src="./JS/index.js"></script>
           {{!-- <link rel='stylesheet' href="./css/style.css"> --}}
+ {{!-- var ballername1="random name1";
+ var p1m=0;
+ var p1over=3.1; --}}
 
 
 </body>
